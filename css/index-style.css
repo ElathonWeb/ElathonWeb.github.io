@@ -14,8 +14,8 @@
   justify-content: space-evenly;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0vh 0vw 1.52vh #B8860B;
-  margin: 7.6vh;
-  padding-bottom: 2vh;
+  margin: 3rem;
+  padding-bottom: 1.2rem;
   border-radius: 3vh;
   transition: box-shadow 1s;
 }
@@ -26,7 +26,7 @@
 
 .presentation .content{
   margin-top: 30px;
-  margin-bottom: 3vh;
+  margin-bottom: 1.2rem;
   padding: 0vh 2.2vw;
   border-radius: 1.5vh;
 }
@@ -34,7 +34,7 @@
 .presentation .content .title {
   font-family: Acme;
   color: white;
-  font-size: 7.6vh;
+  font-size: 3rem;
   margin: 4.56vh 0vw;
   text-align: center;
   cursor: default;
@@ -46,10 +46,10 @@
   margin: auto;
   text-align: center;
   font-family: Grandstander;
-  font-size: 2.43vh;
+  font-size: 1rem;
   letter-spacing: 0.073vw;
   word-spacing: 0.073vw;
-  line-height: 3.8vh;
+  line-height: 1.5rem;
   cursor: default;
 }
 
@@ -73,7 +73,7 @@
 
 .presentation .prs-img {
   margin-top: 4vh;
-  height: 76.1vh;
+  height: 30rem;
   animation: astrobot 10s infinite;
 }
 
@@ -90,8 +90,8 @@
   cursor: url('../images/coronavirus.png') 45 45, pointer;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0vh 0vw 1.52vh #B8860B;
-  margin: 7.6vh;
-  padding: 8vh;
+  margin: 3rem;
+  padding: 3.2rem;
   border-radius: 3vh;
 }
 

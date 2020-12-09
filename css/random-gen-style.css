@@ -9,7 +9,7 @@
 /* ########################################################################################## */
 
 .main-container {
-    margin: 7.61vh auto;
+    margin: 3rem auto;
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
 
 .page-head {
     font-family: Audiowide;
-    font-size: 7.61vh;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     cursor: default;
@@ -32,24 +32,18 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 3vh;
+    padding: 1rem;
 }
 
 .type-container {
     position: relative;
-    width: 23.79vw;
+    width: 23rem;
     background: #122936;
-    height: 65.3vh;
+    height: 30rem;
     border-radius: 3vh;
-    margin: 6vh;
+    margin: 3rem;
     overflow: hidden;
     box-shadow: 0vh 0vw 1.5vh darkturquoise;
-}
-
-@media screen and (max-width: 1050px) {
-    .type-container {
-        width: 40vw;
-    }
 }
 
 .type-container::before {

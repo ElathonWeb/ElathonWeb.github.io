@@ -52,10 +52,10 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 12.2vh;
+    max-height: auto;
     background: linear-gradient(to right, #59b300, #008000);
     border-radius: 4.56vh;
-    margin: 1vh 0.36vw;
+    margin: 1rem 0.5rem;
     box-shadow: 0.3vh 0vw 0.76vh Aqua, 0vh 0.22vw 0.76vh Aqua, -0.3vh 0vw 0.76vh Aqua, 0vh -0.22vw 0.76vh Aqua;
 }
 
@@ -65,15 +65,15 @@ nav {
 }
 
 .logo img {
-    height: 11vh;
+    height: 5rem;
     cursor: pointer;
 }
   
 .logo .logo-txt {
     color: white;
-    line-height: 11vh;
+    line-height: 5.4rem;
     margin-left: 0.73vw;
-    font-size: 4.9vh;
+    font-size: 2.8rem;
     font-family: Audiowide;
     cursor: pointer;
     transition: color 1s;
@@ -96,7 +96,7 @@ nav {
     text-decoration: none;
     color: silver;
     font-family: Grandstander;
-    font-size: 2.4vh;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -116,11 +116,13 @@ nav {
     border-width: 0.19vw;
     border-style: solid;
     background: darkred;
-    height: 5.3vh;
+    height: 3rem;
     width: auto;
     padding: 0vh 0.73vw;
     transition: background 0.3s ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
   
 .login-btn:hover {
@@ -132,7 +134,7 @@ nav {
     text-decoration: none;
     font-family: Audiowide;
     color: white;
-    font-size: 2.43vh;
+    font-size: 1.2rem;
 }
   
 .burger {
@@ -140,7 +142,7 @@ nav {
 }
   
 .burger div{
-    width: 1.83vw;
+    width: 1rem;
     height: 0.76vh;
     background-color: white;
     margin: 0.76vh;
@@ -160,7 +162,7 @@ nav {
     }
 
     .line {
-        width: 30px;
+        width: 2rem;
         height: 3px;
         background: white;
         margin: 5px;
@@ -170,7 +172,7 @@ nav {
         position: fixed;
         right: 0px;
         height: 95vh;
-        top: 12vh;
+        top: 6rem;
         background: linear-gradient(to right, #59b300, #008000);
         display: flex;
         flex-direction: column;
@@ -181,9 +183,13 @@ nav {
         transition: all 1s ease-out;
     }
 
+    .nav-links a {
+        font-size: 2.5rem;
+    }
+
     .nav-links.open {
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
+        clip-path: circle(3000px at 90% -10%);
+        -webkit-clip-path: circle(3000px at 90% -10%);
     }
 }
 
@@ -192,7 +198,7 @@ nav {
 /* ########################################################################################## */
 
 .foot-line {
-    margin: 3vh;
+    margin: 2.3rem;
     height: 0.3vh;
     color: grey;
   }
@@ -203,11 +209,11 @@ nav {
   }
   
   .foot-contents .copyright {
-    margin: 3vh;
+    margin: 2.3rem;
     place-content: left;
     color: silver;
     font-family: Roboto;
-    font-size: 2.43vh;
+    font-size: 1rem;
   }
 
 /* ########################################################################################## */

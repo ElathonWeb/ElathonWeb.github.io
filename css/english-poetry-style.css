@@ -14,7 +14,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7vh;
+    padding: 2rem;
 }
 
 main > div {
@@ -24,13 +24,13 @@ main > div {
 }
 
 .title {
-    font-size: 5rem;
-}
-
-.introduction {
-    font-size: 2rem;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .poetry-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-family: Roboto;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
 }
