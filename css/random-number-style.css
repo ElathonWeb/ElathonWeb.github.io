@@ -11,11 +11,11 @@
 
 .page-head {
     font-family: Audiowide;
-    font-size: 7.61vh;
+    font-size: 4rem;
     font-weight: bold;
     color: white;
     cursor: default;
-    padding: 4.56vh;
+    padding: 2.3rem;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -26,11 +26,11 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    min-height: 30.4vh;
+    min-height: 20rem;
     background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0vh 0vw 1.5vh darkmagenta;
-    margin: 0vh 15vw;
-    border-radius: 3vh;
+    box-shadow: 0 0 0.8rem darkmagenta;
+    margin: 0 13rem;
+    border-radius: 2rem;
 }
 
 .range-selection {
@@ -38,30 +38,30 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 6vh;
+    margin: 4rem;
 }
 
 .field {
     position: relative;
-    margin: 3vh;
+    margin: 1.8rem;
 }
 
 .field input {
-    padding: 1.46vw 3vh;
+    padding: 1.1rem 1.3rem;
     font-family: Grandstander;
-    font-size: 3vh;
+    font-size: 1rem;
     min-height: 55px;
     outline: none;
-    border-radius: 6vh;
+    border-radius: 3rem;
     border-style: solid;
-    border-width: 0.3vh;
+    border-width: 0.1rem;
     border-color: black;
 }
 
 .field label {
     position: absolute;
-    top: 3.7vh;
-    left: 2.5vw;
+    top: 1.3rem;
+    left: 1.8rem;
     font-family: Grandstander;
     font-weight: bold;
     pointer-events: none;
@@ -70,7 +70,7 @@
 }
 
 .field input:focus ~ label, .field input:valid ~ label {
-    transform: translate(-1vw, -6.4vh);
+    transform: translate(-0.5rem, -2.5rem);
     color: lime;
 }
 
@@ -79,15 +79,15 @@
 }
 
 .generate-btn {
-    padding: 3vh;
+    padding: 1.5rem;
 }
 .generate-btn button {
-    padding: 1.5vw 9vh;
+    padding: 1.2rem 4rem;
     outline: none;
     font-family: Poppins;
-    font-size: 3vh;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
     position: relative;
     background: none;
     border: none;
@@ -132,7 +132,7 @@
 .generate-btn button:hover {
     background: #41f321;
     color: #111;
-    box-shadow: 0vh 0vw 3vh #41f321;
+    box-shadow: 0 0 1rem #41f321;
     transition-delay: 0.5s;
 }
 
@@ -141,14 +141,15 @@
     flex-flow: row wrap;
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0vh 0vw 1.5vh darkmagenta;
-    border-radius: 3vh;
-    margin: 6vh 15vw;
+    font-family: Grandstander;
+    box-shadow: 0 0 1 darkmagenta;
+    border-radius: 1.5rem;
+    margin: 2rem 13rem;
     min-height: 100px;
-    padding: 10vh;
+    padding: 5rem;
     text-align: center;
     font-family: Grandstander;
-    font-size: 10vh;
+    font-size: 4rem;
     overflow: hidden;
     color: white;
 }
@@ -163,17 +164,13 @@
     margin: auto;
     color: black;
     font-family: Grandstander;
-    font-size: 3vh;
-    padding: 1.46vw 3vh;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
     background: white;
-    border-radius: 6vh;
+    border-radius: 3rem;
     border-style: solid;
-    border-width: 0.3vh;
+    border-width: 0.1rem;
     border-color: black;
-}
-
-.dup-field input {
-    background: red;
 }
 
 .group {
@@ -181,10 +178,10 @@
     flex-direction: column;
     justify-content: space-around;
     min-width: 100px;
-    margin: 5vh 0vw;
-    border: solid 0.5vh lime;
-    border-radius: 3vh;
-    padding: 2vh 1vw;
+    margin: 2rem 0.5rem;
+    border: solid 0.2rem darkolivegreen;
+    background: rgba(153, 153, 102, 0.3);
+    padding: 1rem 0.8rem;
 }
 
 .datetime span {
@@ -192,7 +189,7 @@
     text-align: center;
     color: white;
     display: block;
-    padding: 4vh;
+    padding: 1.8rem;
 }
 
 /* ########################################################################################## */

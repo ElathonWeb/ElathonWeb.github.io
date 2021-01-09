@@ -16,7 +16,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 2.3vh;
+  width: 1rem;
 }
 
 /* Track */
@@ -27,7 +27,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background-color: orange;
-    border-radius: 1.5vh;
+    border-radius: 1rem;
 }
   
 /* Handle on hover */
@@ -45,7 +45,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     z-index: 100;
-    top: 1vh;
+    top: 0;
 }
 
 nav {
@@ -53,10 +53,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     max-height: auto;
-    background: linear-gradient(to right, #59b300, #008000);
-    border-radius: 4.56vh;
-    margin: 1rem 0.5rem;
-    box-shadow: 0.3vh 0vw 0.76vh Aqua, 0vh 0.22vw 0.76vh Aqua, -0.3vh 0vw 0.76vh Aqua, 0vh -0.22vw 0.76vh Aqua;
+    background: linear-gradient(to right, #666, #888);
 }
 
 .logo {
@@ -87,6 +84,7 @@ nav {
 
 .nav-links {
     display: flex;
+    position: relative;
     list-style: none;
     justify-content: space-around;
     width: 45%;
@@ -94,47 +92,44 @@ nav {
 
 .nav-links a {
     text-decoration: none;
+    position: relative;
     color: silver;
     font-family: Grandstander;
     font-size: 1rem;
 }
 
-.nav-links a:hover {
-    color: white;
-    text-shadow: 0vh 0vw 1vh Cyan;
+nav #marker {
+    position: absolute;
+    height: 4px;
+    width: 0;
+    left: 0;
+    background: #fff;
+    bottom: -8px;
+    transition: 0.5s;
+    border-radius: 4px;
 }
 
-.selected-menu a {
-    text-decoration: underline;
-    text-underline-position: under;
+.nav-links a:hover {
     color: white;
+    text-shadow: 0 0 0.5rem Cyan;
 }
 
 .login-btn{
-    border-color: silver;
-    border-radius: 1.5vh;
-    border-width: 0.19vw;
-    border-style: solid;
-    background: darkred;
     height: 3rem;
     width: auto;
-    padding: 0vh 0.73vw;
-    transition: background 0.3s ease;
-    cursor: pointer;
+    padding: 0 0.5rem;
     display: flex;
+    flex-flow: row nowrap;
     align-items: center;
 }
   
-.login-btn:hover {
-    background: red;
-}
-  
 .login-btn-txt{
-    margin: 0.5vh 0vw;
+    margin: 0.3rem 0;
     text-decoration: none;
     font-family: Audiowide;
     color: white;
     font-size: 1.2rem;
+    cursor: pointer;
 }
   
 .burger {
@@ -143,9 +138,9 @@ nav {
   
 .burger div{
     width: 1rem;
-    height: 0.76vh;
+    height: 0.4rem;
     background-color: white;
-    margin: 0.76vh;
+    margin: 0.4rem;
     transition: all 0.3s ease;
 }
     
@@ -199,7 +194,7 @@ nav {
 
 .foot-line {
     margin: 2.3rem;
-    height: 0.3vh;
+    height: 0.1rem;
     color: grey;
   }
   

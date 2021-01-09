@@ -4,77 +4,74 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
 
+body {
+  background: #111 !important;
+}
+
 /* ########################################################################################## */
 /*                                      Presentation                                          */
 /* ########################################################################################## */
 
-.presentation {
+section {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0vh 0vw 1.52vh #B8860B;
-  margin: 3rem;
-  padding-bottom: 1.2rem;
-  border-radius: 3vh;
-  transition: box-shadow 1s;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Poppins;
 }
 
-.presentation:hover {
-  box-shadow: 0vh 0vw 2.52vh #FFD700;
+section h2 {
+  margin-left: 200px;
+  font-size: 4em;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.presentation .content{
-  margin-top: 30px;
-  margin-bottom: 1.2rem;
-  padding: 0vh 2.2vw;
-  border-radius: 1.5vh;
+section .container {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.presentation .content .title {
-  font-family: Acme;
-  color: white;
-  font-size: 3rem;
-  margin: 4.56vh 0vw;
-  text-align: center;
-  cursor: default;
+section:nth-child(even) .container {
+  flex-direction: row-reverse;
 }
 
-.presentation .content .text {
-  width: 25.62vw;
-  color: #FFFAF0;
-  margin: auto;
-  text-align: center;
-  font-family: Grandstander;
-  font-size: 1rem;
-  letter-spacing: 0.073vw;
-  word-spacing: 0.073vw;
-  line-height: 1.5rem;
-  cursor: default;
+section .container .imgBox {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 1050px) {
-  .presentation .content .text {
-    width: auto;
-  }
+section .container .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes astrobot {
-  25% {
-    transform: translateY(-3vh);
-  }
-  75% {
-    transform: translateY(1.52vh);
-  }
-  100% {
-    transform: translateY(0vh);
-  }
+section .container .content {
+  position: absolute;
+  right: 0;
+  margin-top: 200px;
+  margin-bottom: 40px;
+  padding: 40px;
+  background: #333;
+  z-index: 1;
+  max-width: 400px;
+  color: #fff;
+  border-bottom: 6px solid #4ac7ff;
 }
 
-.presentation .prs-img {
-  margin-top: 4vh;
-  height: 30rem;
-  animation: astrobot 10s infinite;
+section:nth-child(even) .container .content {
+  left: 0;
 }
 
 /* ########################################################################################## */
@@ -88,11 +85,8 @@
   align-items: center;
   justify-content: space-evenly;
   cursor: url('../images/coronavirus.png') 45 45, pointer;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0vh 0vw 1.52vh #B8860B;
   margin: 3rem;
   padding: 3.2rem;
-  border-radius: 3vh;
 }
 
 .covid-container .face {
@@ -104,7 +98,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3vh 0vw;
+  margin: 2rem 0;
 }
 
 .covid-container .face::before {
@@ -156,4 +150,10 @@
   height: 40px;
   background: #333;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 1050px) {
+  .covid-container {
+    display: none;
+  }
 }

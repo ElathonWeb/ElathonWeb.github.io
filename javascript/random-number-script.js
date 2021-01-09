@@ -23,9 +23,6 @@ genBtn.addEventListener('click', (event) => {
     var groups = Math.abs(parseInt(groupInput.value));
     var groupCount = 0;
 
-    amountGenInput.value = generations;
-    groupInput.value = groups;
-
     if (actualMax < actualMin) {
 
         actualMax = actualMin + 1;
@@ -47,6 +44,20 @@ genBtn.addEventListener('click', (event) => {
 
     }
 
+    if (groupInput.value.length == 0) {
+
+        groups = 1;
+        groupInput.value = groups;
+
+    }
+
+    if (amountGenInput.value.length == 0) {
+
+        generations = 1;
+        amountGenInput.value = generations;
+
+    }
+
     if (groups > generations) {
 
         groups = generations;
@@ -54,14 +65,7 @@ genBtn.addEventListener('click', (event) => {
 
     }
 
-    if (groups == 0) {
-
-        groups = 1;
-        groupInput.value = groups;
-
-    }
-
-    if (!dupCheckbox.checked && generations > actualMax) {
+    if (!dupCheckbox.checked && generations > (actualMax - actualMin)) {
 
         generations = actualMax;
         amountGenInput.value = generations;
@@ -113,7 +117,7 @@ genBtn.addEventListener('click', (event) => {
             datetime.innerHTML = '';
             var today = new Date();
             const datetimeText = document.createElement("span");
-            datetimeText.innerText = 'Generation of: ' + today.getDate() + '/' + today.getMonth() + '/' + today.getFullYear() + '  ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+            datetimeText.innerText = 'Generation of: ' + today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear() + ' - ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
             datetime.appendChild(datetimeText);
 
             numCont.scrollIntoView();

@@ -10,42 +10,46 @@
     <body>
         <header>
             <nav>
-                <div class="logo">
-                    <img src="images/elathonlogo.png" alt="Elathon Logo">
-                    <h2 class="logo-txt"><strong>ELATHON</strong></h2>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html"><strong>Home</strong></a></li>
-                    <li class="selected-menu"><a href="random-gen.html"><strong>Random Generator</strong></a></li>
-                    <li><a href="#"><strong>Crypted Notepad</strong></a></li>
-                    <li><a href="subjects-notes.html"><strong>Subjects Notes</strong></a></li>
-                </ul>
-                <div class="login-btn"><p class="login-btn-txt"><b>Account</b></p></div>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
+              <div class="logo">
+                <img src="images/cute-bot.png" alt="logo">
+                <h2 class="logo-txt"><strong>ELATHON</strong></h2>
+              </div>
+              <ul class="nav-links">
+                <div id="marker"></div>
+                <li><b><a href="index.html">Home</a></b></li>
+                <li><b><a href="random-gen.html">Random Generator</a></b></li>
+                <li><b><a href="#">Crypted Notepad</a></b></li>
+                <li><b><a href="subjects-notes.html">Subjects Notes</a></b></li>
+              </ul>
+              <div class="login-btn"><p class="login-btn-txt"><b>Account &#9660</b></p></div>
+              <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <script src="javascript/index-script.js"></script>
+              <script src="javascript/nav-footer-script.js"></script>
             </nav>
-
-            <script src="javascript/index-script.js"></script>
         </header>
 
         <main>
             <div class="main-container">
                 <div class="page-head">Random Generator</div>
                 <div class="choice-container">
-                    <div class="type-container">
+                    <div class="type-container" id="r-numbers">
                         <div class="imgBox">
                             <img src="images/dice.png" alt="dice">
                         </div>
                         <div class="contentBox">
-                            <h2>Random Number</h2>
+                            <h2>Random Numbers</h2>
                             <h3 class="status-avb">Available</h3>
                             <a href="random-number.html" class="select-btn">Select</a>
                         </div>
+                        <div class="info-container" id="info-random-choice">
+                            <p><h3 class="info-title">INFORMATIONS</h3> <br /> This generator is still under development. You will be able to receive information about it as soon as the generator is available for use.</p>
+                        </div>
                     </div>
-                    <div class="type-container">
+                    <div class="type-container" id="r-choice">
                         <div class="imgBox">
                             <img src="images/candy-machine.png" alt="candy machine">
                         </div>
@@ -54,9 +58,13 @@
                             <h3 class="status-mnt">Maintenance</h3>
                             <a href="#" class="select-btn">Select</a>
                         </div>
+                        <div class="info-container" id="info-random-numbers">
+                            <p><h3 class="info-title">INFORMATIONS</h3> <br /> This is the information regarding the Random Numbers, below you will find listed the various options of the generator with their respective meaning. <br /> <span class="subtitle">Minimum:</span> Minimum possible number to generate (min >= -50000) <br /> <span class="subtitle">Maximum:</span> Maximum possible number to generate (max <= 50000) <br /> <span class="subtitle">N. Of Generations:</span> The total amount of generations to run <br /> <span class="subtitle">N. Of Groups:</span> The amount of groups into which generations are to be divided <br /> <span class="subtitle">Duplicates:</span> If it is checked it means that the generator can generate 1 or more equal numbers otherwise it cannot.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <script src="javascript/random-gen-script.js"></script>
         </main>
 
         <footer>

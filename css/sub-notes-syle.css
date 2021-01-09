@@ -9,22 +9,19 @@
 /* ########################################################################################## */
 
 .main-container {
-    margin: 7.61vh;
+    margin: 4rem;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 3vh;
-    box-shadow: 0vh 0vw 1.52vh darkred;
 }
 
 .page-head{
     font-family: Audiowide;
-    font-size: 7.61vh;
+    font-size: 4rem;
     font-weight: bold;
     color: white;
     cursor: default;
-    padding: 4.56vh;
+    padding: 2rem;
 }
 
 .sub-container {
@@ -41,19 +38,19 @@
     justify-content: space-between;
     flex-flow: row wrap;
     align-items: center;
-    background: #228B22;
+    background: #1e7c1e;
     width: 100%;
-    padding: 3vh;
-    margin: 5vh 0vw;
-    border-radius: 1.52vh;
+    padding: 1.2rem;
+    margin: 2rem 0;
+    border-radius: 0.8rem;
     height: auto;
     transition: border-radius 0.3s;
     overflow: hidden;
-    box-shadow: 0vh 0vw 1vh white;
+    box-shadow: 0 0 0.5rem white;
 }
 
 .subject-wrapper:hover {
-    border-radius: 0vh;
+    border-radius: 0;
 }
 
 .subject-wrapper > span {
@@ -70,7 +67,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 0.76vh;
+    height: 0.3rem;
     background: linear-gradient(to right, transparent, #ADFF2F);
     animation: animate1 2s linear infinite;
 }
@@ -109,7 +106,7 @@
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 0.76vh;
+    height: 0.3rem;
     background: linear-gradient(to left, transparent, #ADFF2F);
     animation: animate3 2s linear infinite;
 }
@@ -127,7 +124,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0.36vw;
+    width: 0.1rem;
     height: 100%;
     background: linear-gradient(to top, transparent, #ADFF2F);
     animation: animate4 2s linear infinite;
@@ -148,8 +145,8 @@
 }
 
 .subject-wrapper .info-container img {
-    height: 12.17vh;
-    margin-right: 1.46vw;
+    height: 5rem;
+    margin-right: 0.6rem;
 }
 
 .subject-wrapper .info-container .text {
@@ -161,8 +158,8 @@
 
 .subject-wrapper .info-container .text .subject-title {
     font-family: Acme;
-    font-size: 3.34vh;
-    margin: 1.52vh 0.36vw;
+    font-size: 1.4rem;
+    margin: 0.6rem 0.1rem;
     color: white;
     cursor: default;
 }
@@ -171,20 +168,20 @@
     color: red;
     font-family: Grandstander;
     margin-left: 0.76vw;
-    font-size: 2.43vh;
+    font-size: 1.3rem;
 }
 
 .available {
     color: purple;
     font-family: Grandstander;
     margin-left: 0.76vw;
-    font-size: 2.43vh;
+    font-size: 1.3rem;
 }
 
 .subject-wrapper .info-container .text .subject-des {
     font-family: Grandstander;
-    width: 21.96vw;
-    font-size: 2.43vh;
+    width: 15rem;
+    font-size: 0.9rem;
     color: silver;
     cursor: default;
 }
@@ -216,7 +213,7 @@
 
 .subject-wrapper .subject-btn a:hover {
     transform: scale(1.1, 1.1);
-    box-shadow: 0vh 0vw 1.52vh #000000;
+    box-shadow: 0 0 0.6rem #000000;
 }
 
 @media screen and (max-width: 1050px) {
@@ -224,39 +221,20 @@
         width: 100%;
     }
     .subject-wrapper .subject-btn {
-        margin-top: 5vh;
+        margin-top: 2rem;
     }
 }
 
 @media screen and (min-width: 1051px) {
     .subject-wrapper .subject-btn a {
-        padding: 1.52vh 1.42vw;
-        border-width: 0.3vh;
-        border-radius: 1.52vh;
-        font-size: 3vh;
-        margin: 1.52vh 1.09vw;
+        padding: 0.6rem 0.6rem;
+        border-width: 0.1rem;
+        border-radius: 0.6rem;
+        font-size: 1rem;
+        margin: 0.6rem 0.7rem;
     }
 }
 
 /* ########################################################################################## */
 /*                                   ^  Subject End  ^                                        */
 /* ########################################################################################## */
-
-.foot-line {
-    margin: 3vh;
-    height: 0.3vh;
-    color: grey;
-}
-  
-.foot-contents {
-    justify-content: space-around;
-    position: flex;
-}
-  
-.foot-contents .copyright {
-    margin: 3vh;
-    place-content: left;
-    color: silver;
-    font-family: Roboto;
-    font-size: 2.43vh;
-}

@@ -6,40 +6,97 @@
     <title>Elathon - Home</title>
     <link rel="stylesheet" href="css/index-style.css">
     <link rel="stylesheet" href="css/nav-footer.css">
+    <link rel="stylesheet" href="css/jarallax.css">
   </head>
   <body>
-
     <header>
       <nav>
         <div class="logo">
-          <img src="images/elathonlogo.png" alt="logo">
+          <img src="images/cute-bot.png" alt="logo">
           <h2 class="logo-txt"><strong>ELATHON</strong></h2>
         </div>
         <ul class="nav-links">
-          <li class="selected-menu"><b><a href="#">Home</a></b></li>
+          <div id="marker"></div>
+          <li><b><a href="index.html">Home</a></b></li>
           <li><b><a href="random-gen.html">Random Generator</a></b></li>
           <li><b><a href="#">Crypted Notepad</a></b></li>
           <li><b><a href="subjects-notes.html">Subjects Notes</a></b></li>
         </ul>
-        <div class="login-btn"><p class="login-btn-txt"><b>Account</b></p></div>
+        <div class="login-btn"><p class="login-btn-txt"><b>Account &#9660</b></p></div>
         <div class="hamburger">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
         </div>
-
         <script src="javascript/index-script.js"></script>
+        <script src="javascript/nav-footer-script.js"></script>
       </nav>
     </header>
 
     <main>
-      <div class="presentation">
-        <div class="content">
-          <h2 class="title">Welcome to Elathon</h2>
-          <p class="text">This site, created by Ennio Gualandi, is a site created to facilitate the various daily activities that can also be presented at school. Currently, there are three different sections that perform completely different functions. The first section is that of Random Numbers / Random Choice, the second is the Crypted Notepad while the last currently available is the notes of the various subjects. You can get more information between them by scrolling the page.</p>
+      <section>
+        <div class="box">
+          <h2 data-jarallax-element="0 -200">Welcome to Elathon</h2>
+          <div class="container">
+            <div class="imgBox jarallax">
+              <img src="images/presentation-bg.jpg" alt="presentation img" class="jarallax-img">
+            </div>
+            <div class="content" data-jarallax-element="-200 0">
+              <p> This site, created by Ennio Gualandi, is a site created to facilitate the various daily activities that can also be presented at school. Currently, there are three different sections that perform completely different functions. The first section is that of Random Numbers/Random Choice, the second is the Crypted Notepad while the last currently available is the notes of the various subjects. You can get more information about them by scrolling the page.
+              </p>
+            </div>
+          </div>
         </div>
-        <img class="prs-img" src="images/cute-bot.png" alt="cute bot">
-      </div>
+      </section>
+      <section>
+        <div class="box">
+          <h2 data-jarallax-element="0 200">Random Generator</h2>
+          <div class="container">
+            <div class="imgBox jarallax">
+              <img src="images/generators-presentation-bg.jpg" alt="presentation img" class="jarallax-img">
+            </div>
+            <div class="content" data-jarallax-element="-200 0">
+              <p> Elathon's Random Generator has 2 different generation types. The first type of generation is that of random numbers while the second is the random choice. You can find out more about them by going to the Random Generators section.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="box">
+          <h2 data-jarallax-element="0 -200">Crypted Notepad</h2>
+          <div class="container">
+            <div class="imgBox jarallax">
+              <img src="images/coming-soon-bg.jpg" alt="presentation img" class="jarallax-img">
+            </div>
+            <div class="content" data-jarallax-element="-200 0">
+              <p> Crypted Notepad is like a simple note, you will simply have more privacy options. As soon as the notepad is created, you can choose the date on which other people will be able to view the content or provide a key to access the notepad. If a user enters the link to the notepad page without having the access key or before the release date has arrived, they will only see random letters.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="box">
+          <h2 data-jarallax-element="0 200">Subjects Notes</h2>
+          <div class="container">
+            <div class="imgBox jarallax">
+              <img src="images/subjects-presentation-bg.jpg" alt="presentation img" class="jarallax-img">
+            </div>
+            <div class="content" data-jarallax-element="-200 0">
+              <p> Subjects Notes is the section of Elathon where you can find notes on various subjects. The notes were written by students of a scientific high school. If you are behind with school this is the section for you to use wherever and whenever you want.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="javascript/jarallax.js"></script>
+      <script src="javascript/jarallax-element.js"></script>
+      <script type="text/javascript">
+        jarallax(document.querySelectorAll('.jarallax'), {
+          speed: 0.5
+        });
+      </script>
       <div class="covid-container">
         <div class="face">
           <div class="eyes">
@@ -68,6 +125,5 @@
         <p class="copyright">&copy; 2020 Elathon, All rights reserved.</p>
       </div>
     </footer>
-
   </body>
 </html>

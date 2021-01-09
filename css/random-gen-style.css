@@ -9,14 +9,11 @@
 /* ########################################################################################## */
 
 .main-container {
-    margin: 3rem auto;
-    width: 75%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 3vh;
-    box-shadow: 0vh 0vw 1.52vh darkorchid;
 }
 
 .page-head {
@@ -25,7 +22,7 @@
     font-weight: bold;
     color: white;
     cursor: default;
-    padding: 4.56vh;
+    padding: 2.5rem;
 }
 
 .choice-container {
@@ -40,10 +37,14 @@
     width: 23rem;
     background: #122936;
     height: 30rem;
-    border-radius: 3vh;
+    border-radius: 2rem;
     margin: 3rem;
     overflow: hidden;
-    box-shadow: 0vh 0vw 1.5vh darkturquoise;
+    box-shadow: 0 0vw 0.8rem darkturquoise;
+}
+
+.type-container:hover {
+    box-shadow: 0 0vw 3rem darkturquoise;
 }
 
 .type-container::before {
@@ -71,7 +72,7 @@
 }
 
 .type-container .imgBox img {
-    margin-top: 4.56vh;
+    margin-top: 3.6rem;
     transition: 0.5s;
     max-width: 100%;
 }
@@ -82,7 +83,7 @@
 
 .type-container .contentBox {
     position: relative;
-    padding: 3vh;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,13 +113,13 @@
 .type-container a {
     position: relative;
     background: #2196f3;
-    padding: 1.52vh 2.2vw;
-    top: 30.44vh;
+    padding: 0.8rem 2rem;
+    top: 23rem;
     opacity: 0;
-    margin-top: 2.28vh;
+    margin-top: 1.1rem;
     text-decoration: none;
     border-style: solid;
-    border-radius: 4.56vh;
+    border-radius: 3.8rem;
     border-color: cyan;
     color: white;
     text-transform: uppercase;
@@ -133,6 +134,31 @@
 
 .type-container a:hover {
     background-color: darkcyan;
+}
+
+.info-container {
+    position: absolute;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    font-family: Poppins;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 2rem;
+    opacity: 0;
+    z-index: 2;
+}
+
+.info-title {
+    text-align: center;
+    color: red;
+}
+
+.subtitle {
+    font-weight: bold;
 }
 
 /* ########################################################################################## */
