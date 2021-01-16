@@ -18,7 +18,7 @@
 
 .page-head {
     font-family: Audiowide;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     color: white;
     cursor: default;
@@ -161,6 +161,27 @@
     font-weight: bold;
 }
 
-/* ########################################################################################## */
-/*                                   ^  Generators End  ^                                     */
-/* ########################################################################################## */
+@media screen and (max-width: 1150px) {
+    .choice-container {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .type-container {
+        width: 90vw;
+        height: 45rem;
+        border-radius: 0;
+        margin: 0;
+        overflow: hidden;
+        margin: 0.8rem 0;
+        font-size: 2rem;
+    }
+
+    .type-container::before {
+        display: none;
+    }
+
+    .info-container {
+        font-size: 1.5rem;
+    }
+}

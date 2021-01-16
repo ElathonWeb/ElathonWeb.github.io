@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grandstander:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+
+body {
+  background: #111 !important;
+}
+
+/* ########################################################################################## */
+/*                                      Presentation                                          */
+/* ########################################################################################## */
+
+article {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    font-size: 1rem;
+    width: 90vw;
+    padding: 1rem;
+    background: #333;
+    margin: 1.5rem 0;
+}
+
+section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}

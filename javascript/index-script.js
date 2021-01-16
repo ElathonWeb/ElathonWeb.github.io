@@ -1,10 +1,5 @@
-const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const linls = document.querySelectorAll(".nav-links li");
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle("open");
-});
 
 window.onload = function(){
   document.querySelector('.covid-container').addEventListener('mousemove', function(event) {eyeball(event)});
@@ -19,4 +14,8 @@ function eyeball(e) {
     let rot = (radian * (180 / Math.PI) * -1) + 270;
     eye.style.transform = "rotate(" + rot + "deg)";
   })
+}
+
+if (screen.width <= 1150) {
+     document.location = "index-mobile.html";
 }

@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
 
 /* ########################################################################################## */
-/*                                           Nav                                              */
+/*                                     Scrollbar                                              */
 /* ########################################################################################## */
 
 * {
@@ -35,6 +35,10 @@
 background-color: #FF8C00;
 }
 
+/* ########################################################################################## */
+/*                                           Nav                                              */
+/* ########################################################################################## */
+
 body {
     background-image: url("../images/page-bg.jpg");
     background-attachment: fixed;
@@ -56,6 +60,10 @@ nav {
     background: linear-gradient(to right, #666, #888);
 }
 
+/* ########################################################################################## */
+/*                                          Logo                                              */
+/* ########################################################################################## */
+
 .logo {
     display: flex;
     align-items: center;
@@ -75,12 +83,25 @@ nav {
     cursor: pointer;
     transition: color 1s;
     transition: font-size none; 
-    
 }
 
 .logo .logo-txt:hover {
     color: purple;
 }
+
+@media screen and (max-width: 1150px) {
+    .logo img {
+        height: 8rem;
+    }
+
+    .logo .logo-txt {
+        font-size: 3.6rem;
+    }
+}
+
+/* ########################################################################################## */
+/*                                       Nav Links                                            */
+/* ########################################################################################## */
 
 .nav-links {
     display: flex;
@@ -93,28 +114,32 @@ nav {
 .nav-links a {
     text-decoration: none;
     position: relative;
-    color: silver;
+    color: whitesmoke;
     font-family: Grandstander;
     font-size: 1rem;
+    padding: 5px 10px;
 }
 
-nav #marker {
-    position: absolute;
-    height: 4px;
-    width: 0;
-    left: 0;
-    background: #fff;
-    bottom: -8px;
-    transition: 0.5s;
-    border-radius: 4px;
+.nav-link:hover {
+	color: #000;
+    background: #00a9e2;
 }
 
-.nav-links a:hover {
-    color: white;
-    text-shadow: 0 0 0.5rem Cyan;
+.active {
+    background: #00a9e2;
 }
 
-.login-btn{
+@media screen and (max-width: 1150px) {
+    .nav-links a {
+        font-size: 2rem;
+    }
+}
+
+/* ########################################################################################## */
+/*                                         Login                                              */
+/* ########################################################################################## */
+
+.login-btn {
     height: 3rem;
     width: auto;
     padding: 0 0.5rem;
@@ -123,7 +148,7 @@ nav #marker {
     align-items: center;
 }
   
-.login-btn-txt{
+.login-btn-txt {
     margin: 0.3rem 0;
     text-decoration: none;
     font-family: Audiowide;
@@ -131,85 +156,120 @@ nav #marker {
     font-size: 1.2rem;
     cursor: pointer;
 }
-  
-.burger {
-    display: none;
-}
-  
-.burger div{
-    width: 1rem;
-    height: 0.4rem;
-    background-color: white;
-    margin: 0.4rem;
-    transition: all 0.3s ease;
-}
-    
-@media screen and (max-width: 1050px) {
-    header {
-        top: 0;
-    }
 
-    nav {
-        border: none;
-        box-shadow: none;
-        margin: 0px;
-        border-radius: 0px;
-    }
-
-    .line {
-        width: 2rem;
-        height: 3px;
-        background: white;
-        margin: 5px;
-    }
-
-    .nav-links {
-        position: fixed;
-        right: 0px;
-        height: 95vh;
-        top: 6rem;
-        background: linear-gradient(to right, #59b300, #008000);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        clip-path: circle(70px at 90% -15%);
-        -webkit-clip-path: circle(70px at 90% -15%);
-        transition: all 1s ease-out;
-    }
-
-    .nav-links a {
-        font-size: 2.5rem;
-    }
-
-    .nav-links.open {
-        clip-path: circle(3000px at 90% -10%);
-        -webkit-clip-path: circle(3000px at 90% -10%);
+@media screen and (max-width: 1150px) {
+    .login-btn-txt {
+        font-size: 2rem;
     }
 }
 
 /* ########################################################################################## */
-/*                                   Footer / Nav End                                         */
+/*                                        Hamburger                                           */
+/* ########################################################################################## */
+  
+.hamburger {
+	display: none;
+}
+
+.hamburger div {
+	width: 40px;
+	height: 5px;
+	background: #dbdbdb;
+	margin: 7px;
+	transition:all 0.3s ease;
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-7px,8px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-7px,-8px);
+}
+
+/* ########################################################################################## */
+/*                                      Queries                                               */
+/* ########################################################################################## */
+
+@keyframes navLinkFade {
+	from {
+		opacity:0;
+		transform: translatex(50px);
+	}
+	to {
+		opacity: 1;
+		transform:translatex(0px);
+	}
+}
+    
+@media screen and (max-width: 1150px) {
+    header {
+        top: 0;
+    }
+
+    .nav-links {
+		position:fixed;
+		top: 0px;
+		right:0;
+		width:60%;
+		height: 100vh;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content:space-evenly;
+		background:var(--main-header-background);
+		transform:translatex(100%);
+		transition: transform 0.5s ease-in;
+        z-index: -1;
+        background: linear-gradient(to right, #666, #888);
+    }
+    	
+	.nav-links li {
+		opacity:0;
+	}
+
+    .hamburger {
+		display: block;
+		cursor:pointer;
+    }	
+}
+
+.nav-active {
+	transform:translatex(0%);
+}
+
+/* ########################################################################################## */
+/*                                        Footer                                              */
 /* ########################################################################################## */
 
 .foot-line {
     margin: 2.3rem;
     height: 0.1rem;
     color: grey;
-  }
+}
   
-  .foot-contents {
+.foot-contents {
     justify-content: space-around;
     position: flex;
-  }
+}
   
-  .foot-contents .copyright {
+.foot-contents .copyright {
     margin: 2.3rem;
     place-content: left;
     color: silver;
     font-family: Roboto;
     font-size: 1rem;
-  }
+}
+
+@media screen and (max-width: 1150px) {
+    .foot-contents .copyright {
+        font-size: 2rem;
+    }
+}
 
 /* ########################################################################################## */
 /*                                      Footer End                                            */

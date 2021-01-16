@@ -81,6 +81,7 @@
 .generate-btn {
     padding: 1.5rem;
 }
+
 .generate-btn button {
     padding: 1.2rem 4rem;
     outline: none;
@@ -193,5 +194,73 @@
 }
 
 /* ########################################################################################## */
-/*                                  Number Generators End                                     */
+/*                                        Queries                                             */
 /* ########################################################################################## */
+
+@media screen and (max-width : 1150px) {
+    .gen-container {
+        width: 100vw;
+        min-height: 20rem;
+        background: linear-gradient(to bottom, transparent, #111);
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .field input {
+        font-size: 2rem;
+        min-height: 1.5rem;
+        min-width: 6rem;
+    }
+    
+    .field label {
+        position: absolute;
+        top: 1.4rem;
+        left: 2.2rem;
+        font-size: 2rem;
+    }
+    
+    .field input:focus ~ label, .field input:valid ~ label {
+        transform: translate(-0.8rem, -3.6rem);
+    }
+
+    .dup-field {
+        font-size: 2rem;
+        min-height: 1.5rem;
+    }
+
+    .gen-settings-container {
+        flex-direction: column;
+    }
+
+    .generate-btn {
+        margin: 2rem;
+    }
+
+    #num-container{
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        width: 100vw;
+        margin-top: 1.5rem;
+    }
+
+    .generate-btn button {
+        font-size: 1.6rem;
+    }
+
+    .generate-btn button::before {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .generate-btn button::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .datetime {
+        font-size: 1.3rem;
+    }
+}

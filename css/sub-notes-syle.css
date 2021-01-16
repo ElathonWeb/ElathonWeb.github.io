@@ -216,22 +216,42 @@
     box-shadow: 0 0 0.6rem #000000;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1150px) {
     .subject-wrapper .info-container .text .subject-des {
         width: 100%;
+        font-size: 1.5rem;
     }
+
     .subject-wrapper .subject-btn {
         margin-top: 2rem;
     }
-}
 
-@media screen and (min-width: 1051px) {
     .subject-wrapper .subject-btn a {
         padding: 0.6rem 0.6rem;
         border-width: 0.1rem;
         border-radius: 0.6rem;
-        font-size: 1rem;
+        font-size: 2rem;
         margin: 0.6rem 0.7rem;
+    }
+
+    .subject-wrapper .info-container img {
+        height: 7rem;
+        min-width: 7rem;
+        margin-right: 2.5rem;
+    }
+    
+    .subject-wrapper .info-container .text .subject-title {
+        font-size: 2.4rem;
+    }
+    
+    .not-available {
+        font-size: 2.3rem;
+        margin-left: 1rem;
+    }
+    
+    .available {
+        font-size: 2.3rem;
+        margin-left: 1rem;
     }
 }
 
