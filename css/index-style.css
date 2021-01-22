@@ -3,52 +3,54 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
 body {
-  background: #111 !important;
+  background: #0a2a43 !important;
+  min-height: 1500px;
+}
+
+main {
+  overflow: hidden;
 }
 
 /* ########################################################################################## */
-/*                                      Presentation                                          */
+/*                                           Start                                            */
 /* ########################################################################################## */
 
-section {
+.start {
   position: relative;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  font-family: Poppins;
 }
 
-section h2 {
-  margin-left: 200px;
-  font-size: 4em;
-  color: #fff;
-  margin-bottom: 20px;
+.start::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 10;
 }
 
-section .container {
-  position: relative;
-  width: 1000px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.start::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2a43;
+  mix-blend-mode: color;
+  z-index: 8;
 }
 
-section:nth-child(even) .container {
-  flex-direction: row-reverse;
-}
-
-section .container .imgBox {
-  position: relative;
-  width: 800px;
-  height: 400px;
-  overflow: hidden;
-  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
-}
-
-section .container .imgBox img {
+.start img {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,21 +59,104 @@ section .container .imgBox img {
   object-fit: cover;
 }
 
-section .container .content {
-  position: absolute;
-  right: 0;
-  margin-top: 200px;
-  margin-bottom: 40px;
-  padding: 40px;
-  background: #333;
-  z-index: 1;
-  max-width: 400px;
+#title {
+  position: relative;
   color: #fff;
-  border-bottom: 6px solid #4ac7ff;
+  font-size: 10em;
+  font-family: 'Potta One';
+  text-shadow: 0 0 10px #000;
+  z-index: 2;
 }
 
-section:nth-child(even) .container .content {
-  left: 0;
+#road {
+  z-index: 3;
+}
+
+/* ########################################################################################## */
+/*                                      Presentation                                          */
+/* ########################################################################################## */
+
+.presentation {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.presentation section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4em;
+  width: 100%;
+  height: 90vh;
+}
+
+.presentation img {
+  height: 100%;
+}
+
+.presentation .text {
+  max-width: 40%;
+  font-family: Poppins;
+  font-size: 1.2rem;
+}
+
+.presentation section:nth-child(even) {
+  background: rgb(226, 214, 214);
+  transform: skewY(-5deg);
+  flex-flow: row-reverse nowrap;
+}
+
+.presentation section:nth-child(even) p,
+.presentation section:nth-child(even) img,
+.presentation section:nth-child(even) h2 {
+  transform: skewY(5deg);
+}
+
+.presentation section:nth-child(odd) {
+  color: #fff;
+}
+
+@media screen and (max-width: 1150px) and (orientation: portrait) {
+  #moon {
+    display: none;
+  }
+
+  .presentation img {
+    display: none;
+  }
+
+  .presentation .text {
+    max-width: 100%;
+    line-height: 3em;
+  }
+
+  .presentation section {
+    height: 30vh;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1150px) and (orientation: landscape) {
+  #moon {
+    display: none;
+  }
+
+  .presentation img {
+    display: none;
+  }
+
+  .presentation .text {
+    max-width: 100%;
+    line-height: 2em;
+  }
+
+  .presentation section {
+    height: 80vh;
+    overflow: hidden;
+  }
 }
 
 /* ########################################################################################## */

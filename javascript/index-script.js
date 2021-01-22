@@ -2,7 +2,9 @@ const navLinks = document.querySelector(".nav-links");
 const linls = document.querySelectorAll(".nav-links li");
 
 window.onload = function(){
-  document.querySelector('.covid-container').addEventListener('mousemove', function(event) {eyeball(event)});
+  if(document.location == "index.html") {
+    document.querySelector('.covid-container').addEventListener('mousemove', function(event) {eyeball(event)});
+  }
 }
 
 function eyeball(e) {
@@ -16,6 +18,21 @@ function eyeball(e) {
   })
 }
 
-if (screen.width <= 1150) {
-     document.location = "index-mobile.html";
-}
+// Presentation Parallax Script
+
+const bg = document.getElementById("bg");
+const moon = document.getElementById("moon");
+const mountain = document.getElementById("mountain");
+const road = document.getElementById("road");
+const title = document.getElementById("title");
+
+window.addEventListener('scroll', () => {
+  var value = window.scrollY;
+
+  bg.style.top = value * 0.5 + "px";
+  moon.style.left = -value * 0.5 + "px";
+  mountain.style.top = -value * 0.15 + "px";
+  road.style.top = value * 0.15 + "px";
+  title.style.top = value * 0.6 + "px";
+})
+

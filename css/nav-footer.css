@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 1rem;
@@ -52,12 +56,15 @@ header {
     top: 0;
 }
 
-nav {
+.nav-container {
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
-    max-height: auto;
     background: linear-gradient(to right, #666, #888);
+    max-height: 150px;
+    height: 12vh;
 }
 
 /* ########################################################################################## */
@@ -70,7 +77,8 @@ nav {
 }
 
 .logo img {
-    height: 5rem;
+    max-height: 100px;
+    height: 10vh;
     cursor: pointer;
 }
   
@@ -78,7 +86,7 @@ nav {
     color: white;
     line-height: 5.4rem;
     margin-left: 0.73vw;
-    font-size: 2.8rem;
+    font-size: 2.8em;
     font-family: Audiowide;
     cursor: pointer;
     transition: color 1s;
@@ -87,16 +95,6 @@ nav {
 
 .logo .logo-txt:hover {
     color: purple;
-}
-
-@media screen and (max-width: 1150px) {
-    .logo img {
-        height: 8rem;
-    }
-
-    .logo .logo-txt {
-        font-size: 3.6rem;
-    }
 }
 
 /* ########################################################################################## */
@@ -108,7 +106,8 @@ nav {
     position: relative;
     list-style: none;
     justify-content: space-around;
-    width: 45%;
+    width: auto;
+    text-align: center;
 }
 
 .nav-links a {
@@ -117,7 +116,8 @@ nav {
     color: whitesmoke;
     font-family: Grandstander;
     font-size: 1rem;
-    padding: 5px 10px;
+    padding: 0.3em 0.5em;
+    margin: 0 0.5em;
 }
 
 .nav-link:hover {
@@ -130,7 +130,11 @@ nav {
 }
 
 @media screen and (max-width: 1150px) {
-    .nav-links a {
+    .nav-container {
+        justify-content: space-around;
+    }
+
+    .nav-links a{
         font-size: 2rem;
     }
 }
@@ -153,13 +157,21 @@ nav {
     text-decoration: none;
     font-family: Audiowide;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
+#account-symbol {
+    display: none;
+}
+
 @media screen and (max-width: 1150px) {
-    .login-btn-txt {
-        font-size: 2rem;
+    .account-text {
+        display: none;
+    }
+
+    #account-symbol {
+        display: inline-block;
     }
 }
 
@@ -212,12 +224,13 @@ nav {
     }
 
     .nav-links {
-		position:fixed;
-		top: 0px;
+		position: fixed;
+		top: 0;
 		right:0;
-		width:60%;
+        width:60%;
+        padding-top: 6.5em;
 		height: 100vh;
-		display:flex;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content:space-evenly;
@@ -267,7 +280,7 @@ nav {
 
 @media screen and (max-width: 1150px) {
     .foot-contents .copyright {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 

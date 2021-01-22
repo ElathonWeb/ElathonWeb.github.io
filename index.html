@@ -6,116 +6,72 @@
     <title>Elathon - Home</title>
     <link rel="stylesheet" href="css/index-style.css">
     <link rel="stylesheet" href="css/nav-footer.css">
-    <link rel="stylesheet" href="css/jarallax.css">
+    <script src="https://kit.fontawesome.com/40c96d48bf.js" crossorigin="anonymous"></script>
   </head>
   
   <body>
     <header>
-      <nav>
+      <div class="nav-container">
         <div class="logo">
           <img src="images/cute-bot.png" alt="logo">
           <h2 class="logo-txt"><strong>ELATHON</strong></h2>
         </div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="random-gen.html" class="nav-link">Random Generator</a></li>
-          <li><a href="#" class="nav-link">Crypted Notepad</a></li>
-          <li><a href="subjects-notes.html" class="nav-link">Subjects Notes</a></li>
-        </ul>
-        <div class="login-btn"><p class="login-btn-txt">Account &#9660</p></div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="random-gen.html" class="nav-link">Random Generator</a></li>
+            <li><a href="#" class="nav-link">Crypted Notepad</a></li>
+            <li><a href="subjects-notes.html" class="nav-link">Subjects Notes</a></li>
+          </ul>
+        </nav>
+        <div class="login-btn"><p class="login-btn-txt"><i class="fas fa-user-circle fa-2x" id="account-symbol"></i><span class="account-text">Account</span> &#9660</p></div>
         <div class="hamburger">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <script src="javascript/nav-footer-script.js"></script>
-      </nav>
+      </div>
     </header>
 
     <main>
-      <section>
-        <div class="box">
-          <h2 data-jarallax-element="0 -200">Welcome to Elathon</h2>
-          <div class="container">
-            <div class="imgBox jarallax">
-              <img src="images/presentation-bg.jpg" alt="presentation img" class="jarallax-img">
-            </div>
-            <div class="content" data-jarallax-element="-200 0">
-              <p> This site, created by Ennio Gualandi, is a site created to facilitate the various daily activities that can also be presented at school. Currently, there are three different sections that perform completely different functions. The first section is that of Random Numbers/Random Choice, the second is the Crypted Notepad while the last currently available is the notes of the various subjects. You can get more information about them by scrolling the page.
-              </p>
-            </div>
-          </div>
-        </div>
+      <section class="start">
+        <img src="images/bg.jpg" alt="background" id="bg">
+        <img src="images/moon.png" alt="moon" id="moon">
+        <img src="images/mountain.png" alt="mountain" id="mountain">
+        <img src="images/road.png" alt="road" id="road">
+        <h2 id="title">ELATHON</h2>
       </section>
-      <section>
-        <div class="box">
-          <h2 data-jarallax-element="0 200">Random Generator</h2>
-          <div class="container">
-            <div class="imgBox jarallax">
-              <img src="images/generators-presentation-bg.jpg" alt="presentation img" class="jarallax-img">
-            </div>
-            <div class="content" data-jarallax-element="-200 0">
-              <p> Elathon's Random Generator has 2 different generation types. The first type of generation is that of random numbers while the second is the random choice. You can find out more about them by going to the Random Generators section.
-              </p>
-            </div>
+      <article class="presentation">
+        <section>
+          <div class="text">
+            <h2>What is Elathon?</h2>
+            <p> This site, created by Ennio Gualandi, is a site created to facilitate the various daily activities that can also be presented at school. Currently, there are three different sections that perform completely different functions. The first section is that of Random Numbers/Random Choice, the second is the Crypted Notepad while the last currently available is the notes of the various subjects. You can get more information about them by scrolling the page.</p>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="box">
-          <h2 data-jarallax-element="0 -200">Crypted Notepad</h2>
-          <div class="container">
-            <div class="imgBox jarallax">
-              <img src="images/coming-soon-bg.jpg" alt="presentation img" class="jarallax-img">
-            </div>
-            <div class="content" data-jarallax-element="-200 0">
-              <p> Crypted Notepad is like a simple note, you will simply have more privacy options. As soon as the notepad is created, you can choose the date on which other people will be able to view the content or provide a key to access the notepad. If a user enters the link to the notepad page without having the access key or before the release date has arrived, they will only see random letters.
-              </p>
-            </div>
+          <img src="images/cute-bot4.png" alt="mascotte">
+        </section>
+        <section>
+          <div class="text">
+            <h2>Random Generators</h2>
+            <p> Elathon's Random Generator has 2 different generation types. The first type of generation is that of random numbers while the second is the random choice. You can find out more about them by going to the Random Generators section.</p>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="box">
-          <h2 data-jarallax-element="0 200">Subjects Notes</h2>
-          <div class="container">
-            <div class="imgBox jarallax">
-              <img src="images/subjects-presentation-bg.jpg" alt="presentation img" class="jarallax-img">
-            </div>
-            <div class="content" data-jarallax-element="-200 0">
-              <p> Subjects Notes is the section of Elathon where you can find notes on various subjects. The notes were written by students of a scientific high school. If you are behind with school this is the section for you to use wherever and whenever you want.
-              </p>
-            </div>
+          <img src="images/cute-bot3.png" alt="mascotte">
+        </section>
+        <section>
+          <div class="text">
+            <h2>Crypted Notepad</h2>
+            <p> Crypted Notepad is like a simple note, you will simply have more privacy options. As soon as the notepad is created, you can choose the date on which other people will be able to view the content or provide a key to access the notepad. If a user enters the link to the notepad page without having the access key or before the release date has arrived, they will only see random letters.</p>
           </div>
-        </div>
-      </section>
-      <script src="javascript/jarallax.js"></script>
-      <script src="javascript/jarallax-element.js"></script>
-      <script type="text/javascript">
-        jarallax(document.querySelectorAll('.jarallax'), {
-          speed: 0.5
-        });
-      </script>
-      <div class="covid-container">
-        <div class="face">
-          <div class="eyes">
-            <span class="eye"></span>
-            <span class="eye"></span>
+          <img src="images/cute-bot.png" alt="mascotte">
+        </section>
+        <section>
+          <div class="text">
+            <h2>Subjects Notes</h2>
+            <p> Subjects Notes is the section of Elathon where you can find notes on various subjects. The notes were written by students of a scientific high school. If you are behind with school this is the section for you to use wherever and whenever you want.</p>
           </div>
-        </div>
-        <div class="face">
-          <div class="eyes">
-            <span class="eye"></span>
-            <span class="eye"></span>
-          </div>
-        </div>
-        <div class="face">
-          <div class="eyes">
-            <span class="eye"></span>
-            <span class="eye"></span>
-          </div>
-        </div>
-      </div>
+          <img src="images/cute-bot2.png" alt="mascotte">
+        </section>
+      </article>
       <script src="javascript/index-script.js"></script>
     </main>
 
