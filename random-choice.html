@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Elathon - Random Choice</title>
+    <link rel="stylesheet" href="css/random-choice-style.css">
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <script src="https://kit.fontawesome.com/40c96d48bf.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="images/cute-bot.png" alt="logo">
+          <h2 class="logo-txt"><strong>ELATHON</strong></h2>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="random-gen.html" class="nav-link">Random Generator</a></li>
+            <li><a href="#" class="nav-link">Crypted Notepad</a></li>
+            <li><a href="subjects-notes.html" class="nav-link">Subjects Notes</a></li>
+          </ul>
+        </nav>
+        <div class="login-btn"><p class="login-btn-txt"><i class="fas fa-user-circle fa-2x" id="account-symbol"></i><span class="account-text">Account</span> <i class="fas fa-caret-down"></i></p></div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <script src="javascript/nav-footer-script.js"></script>
+      </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+          <div class="page-head" id="page-title">Random Choice</div>
+          <p class="warnings" id="warning-box"><i class="fas fa-exclamation-triangle"></i> Warning! Please read. <br />- Generator data is currently stored in the search engine cache, if the cache is cleared you will lose all saved generators.</p>
+          <div class="form-container">
+            <form method="GET" class="create-new-form">
+              <div>
+                <label for="name-input" class="name-input-label">Write the name of the Generator *</label>
+                <input type="text" name="name-input" id="name-input" required>
+              </div>
+              <div class="selections">
+                <div>
+                  <button name="form-done" class="form-done" onclick="formComplete(event)">
+                    <i class="fas fa-check"></i>
+                    <span>Done</span>
+                  </button>
+                </div>
+                <div>
+                  <button name="form-cancel" id="form-cancel">
+                    <i class="fas fa-times"></i>
+                    <span>Cancel</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="container">
+              <div class="box">
+                <h3 class="box-title1">CREATE NEW</h3>
+                <i class="fas fa-plus-square fa-7x" id="create-form-input" onclick="createBox('new')"></i>
+              </div>
+          </div>
+        </div>
+        <script src="javascript/random-choice-script.js"></script>
+    </main>
+
+    <footer>
+      <hr class="foot-line">
+      <div class="foot-contents">
+        <p class="copyright">&copy; 2021 Elathon, All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
