@@ -108,7 +108,7 @@ genBtn.addEventListener('click', (event) => {
             numCont.appendChild(errorDiv);
             errorDiv.appendChild(errorSpan);
 
-            errorSpan.scrollIntoView();
+            errorSpan.scrollIntoView({block: "center"});
             break;
         }
         else {

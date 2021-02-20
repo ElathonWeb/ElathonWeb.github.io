@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Elathon - Random Choice</title>
+    <link rel="stylesheet" href="css/random-choice-template-style.css">
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <script src="https://kit.fontawesome.com/40c96d48bf.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">
+          <img src="images/cute-bot.png" alt="logo">
+          <h2 class="logo-txt"><strong>ELATHON</strong></h2>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="random-gen.html" class="nav-link">Random Generator</a></li>
+            <li><a href="#" class="nav-link">Crypted Notepad</a></li>
+            <li><a href="subjects-notes.html" class="nav-link">Subjects Notes</a></li>
+          </ul>
+        </nav>
+        <div class="login-btn"><p class="login-btn-txt"><i class="fas fa-user-circle fa-2x" id="account-symbol"></i><span class="account-text">Account</span> <i class="fas fa-caret-down"></i></p></div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <script src="javascript/nav-footer-script.js"></script>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h2 id="name-title">NAME</h2>
+        <div class="gen-container">
+          <div class="add-choice-box">
+              <input type="text" name="add new choice" id="add-choice-input" placeholder="Write the Name Here">
+              <i onclick="addBox(this)" class="fas fa-plus fa-5x"></i>
+          </div>
+          <div class="names-list-container">
+            <ul>
+            </ul>
+          </div>
+          <div class="gen-settings-container">
+            <div class="field">
+              <input type="number" id="amount-generations-input" value="1" required>
+              <label for="amount-generations-input">Number of Generations *</label>
+            </div>
+            <div class="field">
+              <input type="number" id="group-input" value="1" required>
+              <label for="group-input">Number of Groups *</label>
+            </div>
+            <div class="dup-field">
+              <label for="duplicates-check">Duplicates</label>
+              <input type="checkbox" id="duplicates-check" checked>
+            </div>
+            <div class="gen-btn-container">
+              <div class="generate-btn">
+                <button type="submit" class="btn" onclick="startGeneration()">Generate</button>
+              </div>
+              <div class="datetime"></div>
+            </div>
+          </div>
+          <div id="num-container">
+            <div class="group">
+                <span class="num">Name will be here</span>
+            </div>
+        </div>
+        </div>
+      </div>
+      <script src="javascript/random-choice-template-script.js"></script>
+    </main>
+    <footer>
+      <hr class="foot-line">
+      <div class="foot-contents">
+        <p class="copyright">&copy; 2021 Elathon, All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

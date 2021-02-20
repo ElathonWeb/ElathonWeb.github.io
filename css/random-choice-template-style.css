@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Grandstander:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --container-width: 60%;
+    --box-btn-padding: 1.8em;
+}
+
+.row-disp {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* ########################################################################################## */
+/*                                         Containers                                         */
+/* ########################################################################################## */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+}
+
+.gen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 4em;
+    width: 100%;
+}
+
+.gen-settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(102, 98, 98);
+    padding: 2em;
+    margin-top: 4em;
+    min-width: 550px;
+    width: var(--container-width);
+}
+
+.gen-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#num-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background: rgb(102, 98, 98);
+    font-family: Grandstander;
+    font-family: Grandstander;
+    font-size: 4rem;
+    margin: 2rem 13rem;
+    min-height: 100px;
+    width: var(--container-width);
+    min-width: 400px;
+    padding: 5rem;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 100px;
+    margin: 2rem 0.5rem;
+    border: solid 0.2rem rgb(149, 202, 56);
+    background: rgba(214, 214, 42, 0.541);
+    padding: 1rem 0.8rem;
+}
+
+/* ########################################################################################## */
+/*                                         Title                                              */
+/* ########################################################################################## */
+
+#name-title {
+    font-family: Audiowide;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    cursor: default;
+}
+
+/* ########################################################################################## */
+/*                                         Add choice                                         */
+/* ########################################################################################## */
+
+.add-choice-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(102, 98, 98);
+    padding: 0 0 0 2em;
+    width: var(--container-width);
+    min-width: 550px;
+}
+
+.add-choice-box label {
+    color: #fff;
+    font-size: 2rem;
+    font-family: Lobster;
+}
+
+.add-choice-box input {
+    font-family: Poppins;
+    font-size: 1.7rem;
+    outline: none;
+    padding: 0.5em;
+    margin-left: 0.3em;
+    width: 70%;
+}
+
+.add-choice-box i {
+    color: #fff;
+    background: green;
+    padding: 0.2em;
+    cursor: pointer;
+}
+
+.add-choice-box i:hover {
+    background: rgb(104, 165, 11);
+}
+
+/* ########################################################################################## */
+/*                                         Box Model                                          */
+/* ########################################################################################## */
+
+.names-list-container {
+    margin-top: 5em;
+    padding: 0 2em;
+    width: var(--container-width);
+    background: rgb(102, 98, 98);
+}
+
+.names-list-container ul .choice-box {
+    position: relative;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 0.4em;
+    border: solid 5px darkslategray;
+    background: rgba(158, 255, 30, 0.664);
+}
+
+.names-list-container ul .choice-box:nth-child(1) {
+    margin-top: 2em;
+}
+
+.names-list-container ul .choice-box:nth-last-child(1) {
+    margin-bottom: 2em;
+}
+
+.box-info {
+    justify-content: flex-start;
+    width: 60%;
+    margin: auto 0 auto 0;
+    color: #fff;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.box-info .box-id {
+    background: gray;
+    padding: 0.4em 0;
+    text-align: center;
+    width: 74px;
+}
+
+.box-info .box-name {
+    padding: 0.4em 1em;
+}
+
+.box-buttons button {
+    padding: var(--box-btn-padding) 2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    width: 80px;
+}
+
+.box-buttons .tick-btn {
+    display: block;
+    background: green;
+}
+
+.box-buttons .times-btn {
+    display: none;
+    background: red;
+}
+
+.box-buttons .edit-btn {
+    background: #3396FF;
+}
+
+.box-buttons .del-btn {
+    background: red;
+}
+
+.box-buttons .tick-btn:hover,
+.box-buttons .edit-btn:hover,
+.box-buttons .del-btn:hover,
+.box-buttons .times-btn:hover {
+    color: yellow;
+}
+
+/* ########################################################################################## */
+/*                                      Edit Name Form                                        */
+/* ########################################################################################## */
+
+.create-new-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2em 2em 0 2em;
+    background: grey;
+    box-shadow: 0 0 350px 200px black;
+    width: 400px;
+    height: 300px;
+    top: -100px;
+    left: 20%;
+    z-index: 25;
+}
+
+.name-input-label {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.2rem;
+}
+
+#name-input {
+    margin: 2em;
+    padding: 1em 2em;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.selections {
+    display: flex;
+    flex-direction: row;
+    width: var(--form-size);
+    background: chartreuse;
+}
+
+.selections button {
+    outline: none;
+    font-size: 1.5rem;
+    padding: 1em;
+    width: 200px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-done {
+    background: green;
+    border: solid 3px darkgreen;
+}
+
+#form-cancel {
+    background: red;
+    border: solid 3px darkred;
+}
+
+.form-done:hover {
+    background: rgb(0, 179, 0);
+}
+
+#form-cancel:hover {
+    background: rgb(248, 41, 41);
+}
+
+/* ########################################################################################## */
+/*                                         Gen Settings                                       */
+/* ########################################################################################## */
+
+.field {
+    position: relative;
+    margin: 1.8rem;
+}
+
+.field input {
+    padding: 1.1rem 1.3rem;
+    font-family: Grandstander;
+    font-size: 1rem;
+    width: 70%;
+    min-height: 55px;
+    min-width: 400px;
+    outline: none;
+    border-radius: 3rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+}
+
+.field label {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.8rem;
+    font-family: Grandstander;
+    font-weight: bold;
+    pointer-events: none;
+    color: gray;
+    transition: transform 0.3s ease, color 0.5s ease;
+}
+
+.field input:focus ~ label, .field input:valid ~ label {
+    transform: translate(-0.5rem, -2.5rem);
+    color: lime;
+}
+
+.field input:focus, .field input:valid {
+    border-color: darkblue;
+}
+
+.generate-btn {
+    padding: 1.5rem;
+    margin-top: 1em;
+}
+
+.generate-btn button {
+    padding: 1.2rem 4rem;
+    outline: none;
+    font-family: Poppins;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    position: relative;
+    background: none;
+    border: none;
+    color: #41f321;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.generate-btn button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #41f321;
+    border-left: 2px solid #41f321;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.generate-btn button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #41f321;
+    border-right: 2px solid #41f321;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.generate-btn button:hover::before, .generate-btn button:hover::after {
+    width: 100%;
+    height: 100%;
+    transition-delay: 0s;
+}
+
+.generate-btn button:hover {
+    background: #41f321;
+    color: #111;
+    box-shadow: 0 0 1rem #41f321;
+    transition-delay: 0.5s;
+}
+
+.dup-field {
+    margin: auto;
+    color: black;
+    font-family: Grandstander;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 3rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: black;
+}
+
+.datetime span {
+    font-family: Grandstander;
+    text-align: center;
+    color: white;
+    display: block;
+    padding: 1.8rem;
+}

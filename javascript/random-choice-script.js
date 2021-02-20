@@ -1,4 +1,3 @@
-const header = document.getElementsByTagName("header");
 const footer = document.getElementsByTagName("footer");
 const container = document.querySelector(".container");
 const formContainer = document.querySelector(".form-container");
@@ -11,11 +10,11 @@ const warningBox = document.getElementById("warning-box");
 
 window.onload = () => {
     var randomChoiceObj = JSON.parse(localStorage.getItem('randomChoice'));
+    var objLength = randomChoiceObj.length;
 
     if(randomChoiceObj != null) {
-        for(let i = 0; i < randomChoiceObj.length; i++) {
-            container.innerHTML += `<div class="box"><h3 class="box-title2">${randomChoiceObj[i]}</h3><div class="buttons"><button class="edit-name" id="${i + 1}" onclick="createBox('edit', this.id)">Edit Name</button><button class="remove-box" onclick="removeBox(this)">Delete</button></div><button class="select">SELECT</button></div>`;
-            console.log(randomChoiceObj[i]);
+        for(let i = 0; i < objLength; i++) {
+            container.innerHTML += `<div class="box"><h3 class="box-title2">${randomChoiceObj[i].name}</h3><div class="buttons"><button class="edit-name" id="edit${i + 1}" onclick="createBox('edit', this.id)">Edit Name</button><button class="remove-box" onclick="removeBox(this)">Delete</button></div><button class="select" onclick="selectGen(this)">SELECT</button></div>`;
         }
     }
 }
@@ -26,7 +25,6 @@ function createBox(formID, boxID) {
     if(window.getComputedStyle(formContainer).display == 'none') {
 
         formContainer.style.display = "flex";
-        header[0].classList.toggle("blur");
         footer[0].classList.toggle("blur");
         container.classList.toggle("blur");
         title.classList.toggle("blur");
@@ -46,6 +44,8 @@ function createBox(formID, boxID) {
 function removeBox(box) {
     "use strict";
 
+    var boxName = box.parentNode.previousElementSibling.textContent;
+
     if(window.getComputedStyle(formContainer).display == 'none') {
 
         box.parentNode.parentNode.parentNode.removeChild(box.parentNode.parentNode);
@@ -56,7 +56,7 @@ function removeBox(box) {
             editButtons[i].setAttribute('id', `edit${i + 1}`);
         }
 
-        save();
+        deleteKey('randomChoice', boxName);
     }
 }
 
@@ -64,7 +64,6 @@ formCancel.addEventListener('click', (event) => {
     event.preventDefault();
 
     formContainer.style.display = "none";
-    header[0].classList.toggle("blur");
     footer[0].classList.toggle("blur");
     container.classList.toggle("blur");
     title.classList.toggle("blur");
@@ -92,7 +91,6 @@ function formComplete(event) {
 
     if(nameInput.value.length != 0 && nameInput.value.length <= 12) {
         formContainer.style.display = "none";
-        header[0].classList.toggle("blur");
         footer[0].classList.toggle("blur");
         container.classList.toggle("blur");
         title.classList.toggle("blur");
@@ -110,32 +108,120 @@ function formComplete(event) {
         }
 
         if(formID == 'new') {
-            container.innerHTML += `<div class="box"><h3 class="box-title2">${nameInput.value}</h3><div class="buttons"><button class="edit-name" id="${newID}" onclick="createBox('edit', this.id)">Edit Name</button><button class="remove-box" onclick="removeBox(this)">Delete</button></div><button class="select">SELECT</button></div>`;
+            if(!checkNames(nameInput.value)) {
+                container.innerHTML += `<div class="box"><h3 class="box-title2">${nameInput.value}</h3><div class="buttons"><button class="edit-name" id="${newID}" onclick="createBox('edit', this.id)">Edit Name</button><button class="remove-box" onclick="removeBox(this)">Delete</button></div><button class="select" onclick="selectGen(this)">SELECT</button></div>`;
+
+                addValue('randomChoice', nameInput.value);
+            }
         }
         else {
-            const box = document.getElementById(boxID);
-            box.parentNode.previousElementSibling.textContent = nameInput.value;
+            if(!checkNames(nameInput.value)) {
+                const box = document.getElementById(boxID);
+
+                var oldName = box.parentNode.previousElementSibling.textContent;
+                var newName = nameInput.value;
+
+                box.parentNode.previousElementSibling.textContent = nameInput.value;
+
+                changeValue('randomChoice', oldName, newName);
+            }
         }
 
         nameInput.value = "";
-
-        save();
     }
 }
 
-function save() {
-    const boxesTitles = document.querySelectorAll(".box-title2");
+function addValue(objName, keyName) {
+    "use strict";
 
-    var randomChoiceObj = []
+    var obj = JSON.parse(localStorage.getItem(objName));
 
-    for(let i = 0; i < boxesTitles.length; i++) {
-        randomChoiceObj[i] = boxesTitles[i].textContent;
-        console.log(randomChoiceObj[i]);
+    if(obj != null) {
+        var newObj = {}
+        newObj.name = keyName;
+
+        obj.push(newObj);
+
+        localStorage.setItem(objName, JSON.stringify(obj));
+    }
+    else {
+        var newArray = [];
+        var newObj = {}
+        newObj.name = keyName;
+
+        newArray.push(newObj);
+
+        localStorage.setItem(objName, JSON.stringify(newArray));
+    }
+}
+
+function changeValue(objName, oldName, newName) {
+    "use strict";
+
+    var obj = JSON.parse(localStorage.getItem(objName));
+    var objLength = obj.length;
+
+    if(obj != null) {
+        for(let i = 0; i < objLength; i++) {
+            if(obj[i].name == oldName) {
+                obj[i].name = newName;
+                break;
+            }
+        }
+
+        localStorage.setItem(objName, JSON.stringify(obj));
     }
 
-    localStorage.setItem('randomChoice', JSON.stringify(randomChoiceObj));
+}
+
+function deleteKey(objName, valName) {
+    "use strict";
+
+    var obj = JSON.parse(localStorage.getItem(objName));
+    var objLength = obj.length;
+
+    if(obj != null) {
+        for(let i = 0; i < objLength; i++) {
+            if(obj[i].name == valName) {
+                obj.splice(i, 1);
+                break;
+            }
+        }
+
+        localStorage.setItem(objName, JSON.stringify(obj));
+    }
+}
+
+function checkNames(name) {
+    const names = document.querySelectorAll(".box-title2");
+    var namesLength = names.length;
+
+    for(let i = 0; i < namesLength; i++) {
+        if(names[i].textContent.toUpperCase() == name.toUpperCase()) {
+            alert("There is already another generator with the same name, please choose a different one.");
+            return true;
+            break;
+        }
+    }
+
+    return false;
+}
+
+function selectGen(pressedBtn) {
+    var genName = pressedBtn.previousElementSibling.previousElementSibling.textContent;
+
+    sessionStorage.setItem('actualGenName', genName);
+
+    document.location.href = "../random-choice-template.html";
 }
 
 function clearItem(item) {
     localStorage.removeItem(item);
 }
+
+// randomChoice Object Model
+/* var randomChoiceObj = [
+    {name: ...., gen: [{boxName: ...., tickStat: ....}, {boxName: ...., tickStat: ....}]},
+    {name: ...., gen: [{boxName: ...., tickStat: ....}, {boxName: ...., tickStat: ....}]},
+    {name: ...., gen: [{boxName: ...., tickStat: ....}, {boxName: ...., tickStat: ....}]}
+]*/
